@@ -3,6 +3,12 @@ set wrap
 set number
 set cc=90
 set cursorline
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+set autoindent
+set ts=4 sts=4 sw=4
+set expandtab
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
