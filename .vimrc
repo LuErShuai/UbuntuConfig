@@ -1,6 +1,9 @@
 set textwidth=84
 set wrap
+set linebreak         
+set wrapmargin=0
 set number
+set relativenumber
 set cc=90
 set cursorline
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
