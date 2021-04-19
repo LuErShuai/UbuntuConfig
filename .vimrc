@@ -1,5 +1,6 @@
 set textwidth=84
 set wrap
+set formatoptions+=mM
 set linebreak         
 set wrapmargin=0
 set number
