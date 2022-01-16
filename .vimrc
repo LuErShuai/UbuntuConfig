@@ -23,7 +23,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'davidhalter/jedi-vim'
@@ -58,4 +57,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 let g:virtualenv_directory = '/usr/local/anaconda/envs' 
+
+let g:jedi#show_call_signatures=2
+set completeopt-=preview
 call plug#end()
