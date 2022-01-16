@@ -28,6 +28,7 @@ Plug 'dense-analysis/ale'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'puremourning/vimspector'
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -60,4 +61,6 @@ let g:virtualenv_directory = '/usr/local/anaconda/envs'
 
 let g:jedi#show_call_signatures=2
 set completeopt-=preview
+
+let g:vimspector_enable_mappings = 'HUMAN'
 call plug#end()
