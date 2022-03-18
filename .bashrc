@@ -123,3 +123,4 @@ export PATH
 
 # setting alias for vim
 alias vim='vim --servername foo'
+set -o vi

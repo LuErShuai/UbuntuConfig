@@ -54,6 +54,27 @@
         }
       }
     },
+    "run - argv": {
+      "adapter": "debugpy",
+      "configuration": {
+        "python": "/home/ludashuai/.conda/envs/network/bin/python",
+        "request": "launch",
+        "type": "python",
+        "cwd": "${workspaceRoot}",
+        "program": "${file}",
+        "stopOnEntry": false,
+        "args#json": "${args:[]}",
+        "console": "integratedTerminal"
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "",
+          "userUnhandled": ""
+        }
+      }
+    },
+
     "run - default": {
       "adapter": "debugpy",
       "variables": {

@@ -120,6 +120,35 @@ let g:vimtex_compiler_latexmk_engines = {
     \}
 let g:tex_conceal='abdmg'
 let g:vimtex_complete_enabled=1
+let g:vimtex_toc_enabled=1
+  augroup vimtex_customization
+    autocmd!
+    autocmd FileType tex call CreateTocs()
+  augroup END
+
+  function CreateTocs()
+    let g:custom_toc1 = vimtex#toc#new({
+        \ 'layers' : ['label', 'todo'],
+        \ 'todo_sorted' : 0,
+        \ 'show_help' : 0,
+        \ 'show_numbers' : 0,
+        \ 'mode' : 1,
+        \})
+    nnoremap <silent> \la :call g:custom_toc1.open()<cr>
+
+    let g:custom_toc2 = vimtex#toc#new({
+        \ 'layers' : ['include'],
+        \ 'show_help' : 0,
+        \})
+    nnoremap <silent> \lY :call g:custom_toc2.open()<cr>
+
+    let g:custom_toc3 = vimtex#toc#new({
+        \ 'layers' : ['content'],
+        \ 'show_help' : 0,
+        \ 'mode' : 1,
+        \})
+    nnoremap <silent> \t :call g:custom_toc3.open()<cr>
+  endfunction
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
@@ -153,8 +182,10 @@ nnoremap <leader>w  :VimspectorWatch
 nnoremap <leader>q  :call vimspector#Reset() <CR>
 " Set the basic sizes
 let g:vimspector_sidebar_width = 50 
-let g:vimspector_code_minwidth = 125 
-let g:vimspector_terminal_minwidth = 75
+let g:vimspector_code_minwidth = 84 
+let g:vimspector_terminal_minwidth = 64 
+let g:vimspector_terminal_maxwidth = 130
+let g:vimspector_bottombar_height  = 50 
 " Custom Layout {{{
 
 function! s:CustomiseUI()
